@@ -26,11 +26,16 @@
     </header>
 
     <main>
+        <form action="./" method="GET" id="editor-size">
+            <input type="number" value="16" step="1" min="4" max="64" placeholder="e.g. 8, 16, 48" id="editor-size-number" name="editor-size-number" />
+            <input type="submit" value="Change editor size" id="editor-size-submit" name="editor-size-submit"/>
+        </form>
+        
         <article id="editor">
 
         </article>
         <article id="picker">
-            
+
         </article>
     </main>
 

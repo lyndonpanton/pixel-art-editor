@@ -6,14 +6,15 @@ document.addEventListener("DOMContentLoaded", function (e) {
     let previousColour;
 
     // 4x4 - 64x64
-    createEditor(48);
+    createEditor(4);
     createPicker(colours);
-
 
     let canDraw = false;
 
     document.addEventListener("mousedown", enableDrawing);
     document.addEventListener("mouseup", disableDrawing);
+
+    let form = document.getElementById("")
 
     function changeColour(e) {
         let colour = e.target.classList[1].slice(
@@ -57,6 +58,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
             pickerColour.classList.add("picker-colour", "pixel-" + colours[colour]);
             pickerColour.addEventListener("click", changeColour);
 
+            // Highlight default colour
             if (colours[0] == colours[colour]) {
                 const event = new Event("click");
                 pickerColour.dispatchEvent(event);
@@ -93,10 +95,5 @@ document.addEventListener("DOMContentLoaded", function (e) {
 
             classList.add("pixel", "pixel-" + currentColour);
         }
-    }
-
-    function setInitialColour() {
-        currentColour = "black";
-        e.target.classList.add("picker-colour-selected");
     }
 });
