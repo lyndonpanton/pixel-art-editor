@@ -13,11 +13,18 @@ document.addEventListener("DOMContentLoaded", function (e) {
             for (let j = 0; j < sideLength; j++) {
                 let pixel = document.createElement("article");
                 pixel.classList.add("pixel");
+                pixel.addEventListener("mouseover", fillPixel);
 
                 editorRow.appendChild(pixel);
             }
 
             editor.append(editorRow);
         }
+    }
+
+    function fillPixel(e) {
+        e.preventDefault();
+        e.target.classList.add("pixel-red");
+        console.log("Filled pixel");
     }
 });

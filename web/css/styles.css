@@ -26,7 +26,7 @@ header {
 h1 {
     margin: 0;
     padding: 1vh;
-    
+
     text-align: center;
 }
 
@@ -45,6 +45,46 @@ h1 {
     border: 1px solid black;
     width: 20px;
     height: 20px;
+}
+
+.pixel-black {
+    background-color: black;
+}
+
+.pixel-white {
+    background-color: white;
+}
+
+.pixel-grey {
+    background-color: grey;
+}
+
+.pixel-red {
+    background-color: red;
+}
+
+.pixel-orange {
+    background-color: orange;
+}
+
+.pixel-yellow {
+    background-color: yellow;
+}
+
+.pixel-green {
+    background-color: green;
+}
+
+.pixel-blue {
+    background-color: blue;
+}
+
+.pixel-indigo {
+    background-color: indigo;
+}
+
+.pixel-violet {
+    background-color: violet;
 }
 
 /* Footer *********************************************************************/
