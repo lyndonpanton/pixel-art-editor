@@ -14,12 +14,10 @@ document.addEventListener("DOMContentLoaded", function (e) {
     document.addEventListener("mouseup", disableDrawing);
 
     function changeColour(e) {
-        console.log(e.target.classList);
         let colour = e.target.classList[1].slice(
             e.target.classList[1].lastIndexOf("-") + 1
         );
         
-        console.log(colour);
         currentColour = colour;
     }
     
@@ -65,6 +63,11 @@ document.addEventListener("DOMContentLoaded", function (e) {
         e.preventDefault();
         
         canDraw = true;
+
+        // Make sure to fill pixel event was triggered on
+        if (e.target.classList.contains("pixel")) {
+            fillPixel(e);
+        }
     }
 
     function fillPixel(e) {
