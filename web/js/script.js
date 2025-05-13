@@ -1,7 +1,27 @@
 document.addEventListener("DOMContentLoaded", function (e) {
     console.log("DOM content has loaded");
 
+    
+    let colours = [ "red", "orange", "yellow", "green", "blue", "indigo", "violet" ];
+    let currentColour = "red";
+
     createEditor(16);
+    createPicker(colours);
+
+    let canDraw = false;
+
+    document.addEventListener("mousedown", enableDrawing);
+    document.addEventListener("mouseup", disableDrawing);
+
+    function changeColour(e) {
+        console.log(e.target.classList);
+        let colour = e.target.classList[1].slice(
+            e.target.classList[1].lastIndexOf("-") + 1
+        );
+        
+        console.log(colour);
+        currentColour = colour;
+    }
     
     function createEditor(sideLength) {
         let editor = document.getElementById("editor");
@@ -22,9 +42,40 @@ document.addEventListener("DOMContentLoaded", function (e) {
         }
     }
 
+    function createPicker(colours) {
+        let picker = document.getElementById("picker");
+
+        for (let colour in colours) {
+            console.log(colour + ": " + colours[colour]);
+            let pickerColour = document.createElement("article");
+            pickerColour.classList.add("picker-colour", "pixel-" + colours[colour]);
+            pickerColour.addEventListener("click", changeColour);
+
+            picker.appendChild(pickerColour);
+        }
+    }
+
+    function disableDrawing(e) {
+        e.preventDefault();
+        
+        canDraw = false;
+    }
+
+    function enableDrawing(e) {
+        e.preventDefault();
+        
+        canDraw = true;
+    }
+
     function fillPixel(e) {
         e.preventDefault();
-        e.target.classList.add("pixel-red");
-        console.log("Filled pixel");
+
+        if (canDraw) {
+            let classList = e.target.classList;
+
+            while (classList.length > 0) classList.remove(classList.item(0));
+
+            classList.add("pixel", "pixel-" + currentColour);
+        }
     }
 });

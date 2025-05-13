@@ -31,6 +31,8 @@ h1 {
 }
 
 /* Main ***********************************************************************/
+
+/* Editor */
 #editor {
     display: flex;
     flex-direction: row;
@@ -85,6 +87,18 @@ h1 {
 
 .pixel-violet {
     background-color: violet;
+}
+
+/* Picker */
+#picker {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.picker-colour {
+    border: 1px solid black;
+    width: 20px;
+    height: 20px;
 }
 
 /* Footer *********************************************************************/
