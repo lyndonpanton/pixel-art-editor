@@ -9,7 +9,8 @@ A list of tasks I need to do to complete this project.
 ### Content
 
 - [x] Header
-- [x] Main
+- [ ] Main
+    - [ ] Add a clear button
 - [ ] Footer
     - [ ] Add project information
     - [ ] Add social and legal links
@@ -24,6 +25,8 @@ A list of tasks I need to do to complete this project.
     - [ ] Mobile
 
 ### Interactivity
+
+- [ ] Pressing the clear button show reset the editor
 
 ### Validation
 
