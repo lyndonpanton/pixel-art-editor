@@ -35,13 +35,18 @@ document.addEventListener("DOMContentLoaded", function (e) {
     function changeEditorSize(e) {
         // Cancel if editor is already the same size...
 
-        
         e.preventDefault();
 
         const formData = new FormData(form);
 
-        for (const [key, value] of formData) {
-            console.log(key + ": " + value);
+        let editor = document.getElementById("editor");
+        
+        while (editor.firstChild) {
+            editor.removeChild(editor.firstChild);
+        }
+
+        for (const [key, sideLength] of formData) {
+            createEditor(sideLength);
         }
 
         createEditor();
