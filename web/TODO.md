@@ -15,6 +15,7 @@ A list of tasks I need to do to complete this project.
     - [ ] Add project information
     - [ ] Add social and legal links
     - [ ] Add copyright
+    - [ ] Change font (see portfolio)
 
 ### Styling
 
