@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function (e) {
-    console.log("DOM content has loaded");
+    let currentYear = document.getElementById("current-year");
+    currentYear.textContent = new Date().getFullYear();
     
     let colours = ["black", "white", "grey", "red", "orange", "yellow", "green", "blue", "indigo", "violet"];
     let currentColour;
