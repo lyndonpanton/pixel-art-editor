@@ -22,6 +22,15 @@ body, html {
     font-size: 16px;
 }
 
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    appearance: textfield;
+}
+
 /* Header *********************************************************************/
 header {
 
@@ -36,6 +45,74 @@ h1 {
 }
 
 /* Main ***********************************************************************/
+
+/* Popup */
+#popup {
+    position: fixed;
+    top: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    /* #EEEEEE */
+    background-color: rgba(238, 238, 238, 0.7);
+}
+
+.popup-hidden {
+    display: none;
+}
+
+#popup-form {
+    margin-top: 25vh;
+    margin-left: 20vw;
+    border: 2px solid black;
+    border-radius: 10px;
+    width: 60vw;
+    height: 50vh;
+
+    background-color: white;
+    /* opacity: 1; */
+
+    font-size: 2em;
+    text-align: center; 
+}
+
+#popup-form > * {
+    display: block;
+
+    margin: 0 auto;
+}
+
+#popup-prompt {
+    margin-top: 12vh;
+}
+
+#popup-input {
+    margin-top: 5vh;
+    border: 3px solid black;
+    border-radius: 4px;
+    width: 70%;
+    height: 8vh;
+
+    font-size: 1.5em;
+    text-align: center;
+}
+
+#popup-submit {
+    margin-top: 5vh;
+    border: 2px solid black;
+    border-radius: 4px;
+    height: 8vh;
+    width: 40%;
+
+    background-color: #ABCDEF;
+
+    font-size: 1.3em;
+}
+
+#popup-submit:active {
+    background-color: #BCDEFF;
+}
 
 /* Editor */
 #editor {

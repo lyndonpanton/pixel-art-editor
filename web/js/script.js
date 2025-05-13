@@ -14,7 +14,11 @@ document.addEventListener("DOMContentLoaded", function (e) {
     document.addEventListener("mousedown", enableDrawing);
     document.addEventListener("mouseup", disableDrawing);
 
-    let form = document.getElementById("editor-size");
+    let popup = document.getElementById("popup");
+    let button = document.getElementById("editor-button");
+    button.addEventListener("click", showEditorPopup);
+
+    let form = document.getElementById("popup-form");
     form.addEventListener("submit", changeEditorSize);
 
     function changeColour(e) {
@@ -49,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
             createEditor(sideLength);
         }
 
-        createEditor();
+        hideEditorPopup();
     }
     
     function createEditor(sideLength) {
@@ -97,7 +101,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
 
     function enableDrawing(e) {
         // Do not remove ability to press mouse on other input elements
-        if (e.target == form || e.target.parentElement == form) return;
+        if (e.target == button || e.target.parentElement == form) return;
 
         e.preventDefault();
         
@@ -119,5 +123,13 @@ document.addEventListener("DOMContentLoaded", function (e) {
 
             classList.add("pixel", "pixel-" + currentColour);
         }
+    }
+
+    function hideEditorPopup() {
+        popup.classList.add("popup-hidden");
+    }
+
+    function showEditorPopup() {
+        popup.classList.remove("popup-hidden");
     }
 });
