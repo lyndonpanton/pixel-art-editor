@@ -26,8 +26,19 @@
     </header>
 
     <main>
-        <form action="./" method="GET" id="editor-size">
-            <input type="number" value="16" step="1" min="4" max="64" placeholder="e.g. 8, 16, 48" id="editor-size-number" name="editor-size-number" />
+        <form id="editor-size">
+            <!-- <input type="text" inputmode="numeric" pattern="[0-9]*" value="16" placeholder="e.g. 8, 16, 48" id="editor-size-number" name="editor-size-number"/> -->
+            <input type="number" value="16" step="1" min="4" max="64" placeholder="e.g. 8, 16, 48" id="editor-size-number" name="editor-size-number"/>
+            <!-- <select name="editor-size-number" id="editor-size-number">
+                <option value="4">4</option>
+                <option value="8">8</option>
+                <option value="16">16</option>
+                <option value="24">24</option>
+                <option value="32">32</option>
+                <option value="40">40</option>
+                <option value="48">48</option>
+            </select> -->
+            
             <input type="submit" value="Change editor size" id="editor-size-submit" name="editor-size-submit"/>
         </form>
         

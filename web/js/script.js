@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
     let previousColour;
 
     // 4x4 - 64x64
-    createEditor(4);
+    createEditor(16);
     createPicker(colours);
 
     let canDraw = false;
@@ -14,7 +14,8 @@ document.addEventListener("DOMContentLoaded", function (e) {
     document.addEventListener("mousedown", enableDrawing);
     document.addEventListener("mouseup", disableDrawing);
 
-    let form = document.getElementById("")
+    let form = document.getElementById("editor-size");
+    form.addEventListener("submit", changeEditorSize);
 
     function changeColour(e) {
         let colour = e.target.classList[1].slice(
@@ -29,6 +30,21 @@ document.addEventListener("DOMContentLoaded", function (e) {
         e.target.classList.add("picker-colour-selected");
 
         previousColour = e.target;
+    }
+
+    function changeEditorSize(e) {
+        // Cancel if editor is already the same size...
+
+        
+        e.preventDefault();
+
+        const formData = new FormData(form);
+
+        for (const [key, value] of formData) {
+            console.log(key + ": " + value);
+        }
+
+        createEditor();
     }
     
     function createEditor(sideLength) {
@@ -75,6 +91,9 @@ document.addEventListener("DOMContentLoaded", function (e) {
     }
 
     function enableDrawing(e) {
+        // Do not remove ability to press mouse on other input elements
+        if (e.target == form || e.target.parentElement == form) return;
+
         e.preventDefault();
         
         canDraw = true;

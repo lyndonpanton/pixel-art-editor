@@ -50,6 +50,8 @@ h1 {
 
 .pixel {
     border: 1px solid black;
+    border-collapse: collapse;
+    
     width: 16px;
     height: 16px;
 }
