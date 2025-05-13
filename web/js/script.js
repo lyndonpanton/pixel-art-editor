@@ -2,8 +2,9 @@ document.addEventListener("DOMContentLoaded", function (e) {
     console.log("DOM content has loaded");
 
     
-    let colours = [ "red", "orange", "yellow", "green", "blue", "indigo", "violet" ];
+    let colours = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"];
     let currentColour = "red";
+    let previousColour;
 
     createEditor(16);
     createPicker(colours);
@@ -19,6 +20,12 @@ document.addEventListener("DOMContentLoaded", function (e) {
         );
         
         currentColour = colour;
+        
+        if (previousColour != null) previousColour.classList.remove("picker-colour-selected");
+        
+        e.target.classList.add("picker-colour-selected");
+
+        previousColour = e.target;
     }
     
     function createEditor(sideLength) {
