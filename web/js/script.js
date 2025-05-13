@@ -1,13 +1,14 @@
 document.addEventListener("DOMContentLoaded", function (e) {
     console.log("DOM content has loaded");
-
     
-    let colours = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"];
-    let currentColour = "red";
+    let colours = ["black", "white", "grey", "red", "orange", "yellow", "green", "blue", "indigo", "violet"];
+    let currentColour;
     let previousColour;
 
-    createEditor(16);
+    // 4x4 - 64x64
+    createEditor(48);
     createPicker(colours);
+
 
     let canDraw = false;
 
@@ -20,9 +21,10 @@ document.addEventListener("DOMContentLoaded", function (e) {
         );
         
         currentColour = colour;
+        console.log(currentColour);
         
         if (previousColour != null) previousColour.classList.remove("picker-colour-selected");
-        
+
         e.target.classList.add("picker-colour-selected");
 
         previousColour = e.target;
@@ -51,10 +53,14 @@ document.addEventListener("DOMContentLoaded", function (e) {
         let picker = document.getElementById("picker");
 
         for (let colour in colours) {
-            console.log(colour + ": " + colours[colour]);
             let pickerColour = document.createElement("article");
             pickerColour.classList.add("picker-colour", "pixel-" + colours[colour]);
             pickerColour.addEventListener("click", changeColour);
+
+            if (colours[0] == colours[colour]) {
+                const event = new Event("click");
+                pickerColour.dispatchEvent(event);
+            }
 
             picker.appendChild(pickerColour);
         }
@@ -87,5 +93,10 @@ document.addEventListener("DOMContentLoaded", function (e) {
 
             classList.add("pixel", "pixel-" + currentColour);
         }
+    }
+
+    function setInitialColour() {
+        currentColour = "black";
+        e.target.classList.add("picker-colour-selected");
     }
 });

@@ -18,6 +18,8 @@
 body, html {
     margin: 0;
     padding: 0;
+
+    font-size: 16px;
 }
 
 /* Header *********************************************************************/
@@ -29,6 +31,7 @@ h1 {
     margin: 0;
     padding: 1vh;
 
+    font-size: 5em;
     text-align: center;
 }
 
@@ -47,8 +50,8 @@ h1 {
 
 .pixel {
     border: 1px solid black;
-    width: 20px;
-    height: 20px;
+    width: 16px;
+    height: 16px;
 }
 
 .pixel-black {
