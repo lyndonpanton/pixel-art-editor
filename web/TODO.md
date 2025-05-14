@@ -10,7 +10,9 @@ A list of tasks I need to do to complete this project.
 
 - [x] Header
 - [ ] Main
-    - [ ] Add a clear button
+    - [x] Add clear button
+    - [x] Add save button
+    - [ ] Editor size popup should have a _X_ icon
 - [ ] Footer
     - [ ] Add project information
     - [ ] Add social and legal links
@@ -19,8 +21,10 @@ A list of tasks I need to do to complete this project.
 
 ### Styling
 
+- [ ] Change theme colour
 - [ ] Project should be optimised for different screen sizes
     - [ ] Desktop
+        - [ ] Canvas and picker should be on the same row
     - [ ] Laptop
     - [ ] Tablet
     - [ ] Mobile
@@ -28,14 +32,29 @@ A list of tasks I need to do to complete this project.
 ### Interactivity
 
 - [ ] Pressing the clear button show reset the editor
+- [ ] Pressing the save button should give download an image to the user
+- [ ] Closing the editor popup
+    - [ ] Clicking _X_ icon in the editor popup should close it
+    - [ ] Pressing enter whilst focused on the _X_ icon in the editor popup should
+    close it
+    - [ ] Pressed ESC whilst the editor popup is open should close it
 
 ### Validation
+
+- [ ] User should be warned if they attempt to change the canvas size to be the
+same size it is already
+- [ ] User should be warned if they attempt to clear an empty canvas
 
 ### Accessibility
 
 - [ ] Tab index
 - [ ] w3c validator
 - [ ] Skip to main content
+
+### Storage
+
+- [ ] Current canvas state should be save to localStorage
+- [ ] Current colour should be saved to localStorage
 
 ### Testing
 

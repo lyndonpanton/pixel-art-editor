@@ -7,7 +7,9 @@ document.addEventListener("DOMContentLoaded", function (e) {
     let previousColour;
 
     // 4x4 - 64x64
-    createCanvas(16);
+    let currentSideLength = 16;
+
+    createCanvas(currentSideLength);
     createPicker(colours);
 
     let canDraw = false;
@@ -21,6 +23,8 @@ document.addEventListener("DOMContentLoaded", function (e) {
     let clearButton = document.getElementById("editor-button-clear");
 
     sizeButton.addEventListener("click", showEditorPopup);
+    saveButton.addEventListener("click", saveCanvas);
+    clearButton.addEventListener("click", clearCanvas);
 
     let form = document.getElementById("popup-form");
     form.addEventListener("submit", changeEditorSize);
@@ -53,9 +57,10 @@ document.addEventListener("DOMContentLoaded", function (e) {
         }
 
         for (const [key, sideLength] of formData) {
-            createCanvas(sideLength);
+            currentSideLength = sideLength;
         }
-
+        
+        createCanvas(currentSideLength);
         hideEditorPopup();
     }
     
