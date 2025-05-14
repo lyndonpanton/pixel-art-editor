@@ -116,6 +116,8 @@ document.addEventListener("DOMContentLoaded", function (e) {
 
             canvas.appendChild(canvasRow);
         }
+
+        localStorage.setItem("dataCanvas", JSON.stringify(dataCanvas));
     }
 
     function createCanvasFromData(data) {
@@ -164,6 +166,8 @@ document.addEventListener("DOMContentLoaded", function (e) {
             canvas.removeChild(canvas.firstChild);
             dataCanvas.pop();
         }
+
+        localStorage.setItem("dataCanvas", JSON.stringify(dataCanvas));
     }
 
     function disableDrawing(e) {
@@ -205,7 +209,6 @@ document.addEventListener("DOMContentLoaded", function (e) {
             for (let i = 0; i < canvas.children.length; i++) {
                 for (let j = 0; j < canvas.children[i].children.length; j++) {
                     if (e.target.isEqualNode(canvas.children[i].children[j])) {
-                        // Fill in (i, j) of dataCanvas
                         dataCanvas[i][j] = currentColour;
                     }
                 }
@@ -213,7 +216,6 @@ document.addEventListener("DOMContentLoaded", function (e) {
 
             localStorage.setItem("dataCanvas", JSON.stringify(dataCanvas));
         }
-
     }
 
     function highlightPixel(e) {
