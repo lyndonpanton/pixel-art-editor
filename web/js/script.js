@@ -50,11 +50,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
 
         const formData = new FormData(form);
 
-        let canvas = document.getElementById("canvas");
-        
-        while (canvas.firstChild) {
-            canvas.removeChild(canvas.firstChild);
-        }
+        destroyCanvas();
 
         for (const [key, sideLength] of formData) {
             currentSideLength = sideLength;
@@ -62,6 +58,11 @@ document.addEventListener("DOMContentLoaded", function (e) {
         
         createCanvas(currentSideLength);
         hideEditorPopup();
+    }
+
+    function clearCanvas(e) {
+        destroyCanvas();
+        createCanvas(currentSideLength);
     }
     
     function createCanvas(sideLength) {
@@ -100,6 +101,14 @@ document.addEventListener("DOMContentLoaded", function (e) {
             }
 
             picker.appendChild(pickerColour);
+        }
+    }
+    
+    function destroyCanvas() {
+        let canvas = document.getElementById("canvas");
+        
+        while (canvas.firstChild) {
+            canvas.removeChild(canvas.firstChild);
         }
     }
 
@@ -145,6 +154,10 @@ document.addEventListener("DOMContentLoaded", function (e) {
 
     function hideEditorPopup() {
         popup.classList.add("popup-hidden");
+    }
+
+    function saveCanvas(e) {
+
     }
 
     function showEditorPopup() {
