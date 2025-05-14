@@ -16,8 +16,11 @@ document.addEventListener("DOMContentLoaded", function (e) {
     document.addEventListener("mouseup", disableDrawing);
 
     let popup = document.getElementById("popup");
-    let button = document.getElementById("editor-button");
-    button.addEventListener("click", showEditorPopup);
+    let sizeButton = document.getElementById("editor-button-size");
+    let saveButton = document.getElementById("editor-button-save");
+    let clearButton = document.getElementById("editor-button-clear");
+
+    sizeButton.addEventListener("click", showEditorPopup);
 
     let form = document.getElementById("popup-form");
     form.addEventListener("submit", changeEditorSize);
@@ -28,7 +31,6 @@ document.addEventListener("DOMContentLoaded", function (e) {
         );
         
         currentColour = colour;
-        console.log(currentColour);
         
         if (previousColour != null) previousColour.classList.remove("picker-colour-selected");
 
@@ -104,7 +106,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
 
     function enableDrawing(e) {
         // Do not remove ability to press mouse on other input elements
-        if (e.target == button || e.target.parentElement == form) return;
+        if (e.target.classList.contains("editor-button") || e.target.parentElement == form) return;
 
         e.preventDefault();
         

@@ -116,22 +116,46 @@ main {
     font-size: 1.3em;
 }
 
-#popup-submit:active, #editor-button:active {
+#popup-submit:active {
     background-color: #BCDEFF;
 }
 
-#editor-button {
-    display: block;
+/* Editor Button */
+#editor-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 
     margin: 0 auto 4vh;
+
+}
+
+#editor-button-size {
+    
+}
+
+#editor-button-save {
+
+}
+
+#editor-button-clear {
+
+}
+
+.editor-button {
+    margin: 0 20px;
     border: 2px solid black;
     border-radius: 4px;
     width: 240px;
     height: 60px;
-
+    
     background-color: #ABCDEF;
-
+    
     font-size: 1.2em;
+}
+
+.editor-button:active {
+    background-color: #BCDEFF;
 }
 
 /* Editor */
