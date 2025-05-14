@@ -48,7 +48,7 @@ same size it is already
 ### Storage
 
 - [x] Current canvas state should be saved to localStorage
-- [ ] Current colour should be saved to localStorage
+- [x] Current colour should be saved to localStorage
 
 ### Accessibility
 
