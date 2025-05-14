@@ -40,11 +40,11 @@ document.addEventListener("DOMContentLoaded", function (e) {
 
     let popup = document.getElementById("popup");
     let sizeButton = document.getElementById("editor-button-size");
-    let saveButton = document.getElementById("editor-button-save");
+    let downloadButton = document.getElementById("editor-button-download");
     let clearButton = document.getElementById("editor-button-clear");
 
     sizeButton.addEventListener("click", showEditorPopup);
-    saveButton.addEventListener("click", saveCanvas);
+    downloadButton.addEventListener("click", downloadCanvas);
     clearButton.addEventListener("click", clearCanvas);
 
     let form = document.getElementById("popup-form");
@@ -155,6 +155,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
         
         while (canvas.firstChild) {
             canvas.removeChild(canvas.firstChild);
+            dataCanvas.pop();
         }
     }
 
@@ -162,6 +163,10 @@ document.addEventListener("DOMContentLoaded", function (e) {
         e.preventDefault();
         
         canDraw = false;
+    }
+
+    function downloadCanvas(e) {
+
     }
 
     function enableDrawing(e) {
@@ -214,12 +219,6 @@ document.addEventListener("DOMContentLoaded", function (e) {
 
     function hideEditorPopup() {
         popup.classList.add("popup-hidden");
-    }
-
-    function saveCanvas() {
-        // let canvas = document.getElementById("canvas");
-
-        // localStorage.setItem("canvas", canvas.innerHTML);
     }
 
     function showEditorPopup() {
