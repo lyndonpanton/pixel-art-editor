@@ -181,44 +181,80 @@ main {
     border: 3px solid black;
 }
 
+.pixel-aqua {
+    background-color: aqua;
+}
+
 .pixel-black {
     background-color: black;
-}
-
-.pixel-white {
-    background-color: white;
-}
-
-.pixel-grey {
-    background-color: grey;
-}
-
-.pixel-red {
-    background-color: red;
-}
-
-.pixel-orange {
-    background-color: orange;
-}
-
-.pixel-yellow {
-    background-color: yellow;
-}
-
-.pixel-green {
-    background-color: green;
 }
 
 .pixel-blue {
     background-color: blue;
 }
 
+.pixel-fuchsia {
+    background-color: fuchsia;
+}
+
+.pixel-green {
+    background-color: green;
+}
+
+.pixel-grey {
+    background-color: grey;
+}
+
 .pixel-indigo {
     background-color: indigo;
 }
 
+.pixel-lime {
+    background-color: lime;
+}
+
+.pixel-maroon {
+    background-color: maroon;
+}
+
+.pixel-navy {
+    background-color: navy;
+}
+
+.pixel-olive {
+    background-color: olive;
+}
+
+.pixel-orange {
+    background-color: orange;
+}
+
+.pixel-purple {
+    background-color: purple;
+}
+
+.pixel-red {
+    background-color: red;
+}
+
+.pixel-silver {
+    background-color: silver;
+}
+
+.pixel-teal {
+    background-color: teal;
+}
+
 .pixel-violet {
     background-color: violet;
+}
+
+.pixel-white {
+    background-color: white;
+}
+
+.pixel-yellow {
+    background-color: yellow;
 }
 
 /* Picker */

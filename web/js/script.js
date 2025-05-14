@@ -2,7 +2,13 @@ document.addEventListener("DOMContentLoaded", function (e) {
     let currentYear = document.getElementById("current-year");
     currentYear.textContent = new Date().getFullYear();
     
-    let colours = ["black", "white", "grey", "red", "orange", "yellow", "green", "blue", "indigo", "violet"];
+    let colours = [
+            "black", "white", "grey", "silver",
+            "maroon", "red", "orange", "yellow",
+            "olive", "green", "lime",
+            "aqua", "teal", "blue", "navy",
+            "indigo", "violet", "purple", "fuchsia"
+    ];
     // let colours = {
     //     "black": "#000000",
     //     "white": "#FFFFFF",
