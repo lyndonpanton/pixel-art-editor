@@ -45,16 +45,16 @@ A list of tasks I need to do to complete this project.
 same size it is already
 - [ ] User should be warned if they attempt to clear an empty canvas
 
+### Storage
+
+- [ ] Current canvas state should be saved to localStorage
+- [ ] Current colour should be saved to localStorage
+
 ### Accessibility
 
 - [ ] Tab index
 - [ ] w3c validator
 - [ ] Skip to main content
-
-### Storage
-
-- [ ] Current canvas state should be save to localStorage
-- [ ] Current colour should be saved to localStorage
 
 ### Testing
 

@@ -3,13 +3,34 @@ document.addEventListener("DOMContentLoaded", function (e) {
     currentYear.textContent = new Date().getFullYear();
     
     let colours = ["black", "white", "grey", "red", "orange", "yellow", "green", "blue", "indigo", "violet"];
+    // let colours = {
+    //     "black": "#000000",
+    //     "white": "#FFFFFF",
+    //     "grey": "",
+    //     "red": "#FF0000",
+    //     "orange": "",
+    //     "yellow": "",
+    //     "green": "#008000",
+    //     "blue": "#00FFFF",
+    //     "indigo": "",
+    //     "violet": ""
+    // };
     let currentColour;
     let previousColour;
 
-    // 4x4 - 64x64
+    // 4x4 - 48x48
     let currentSideLength = 16;
+    // A multidimensional array of colours
+    let dataCanvas = [];
 
-    createCanvas(currentSideLength);
+    if (localStorage.getItem("dataCanvas")) {
+        dataCanvas = JSON.parse(localStorage.getItem("dataCanvas"));
+        createCanvasFromData(dataCanvas);
+        console.log(dataCanvas);
+    } else {
+        createCanvas(currentSideLength);
+    }
+
     createPicker(colours);
 
     let canDraw = false;
@@ -72,6 +93,8 @@ document.addEventListener("DOMContentLoaded", function (e) {
             let canvasRow = document.createElement("section");
             canvasRow.classList.add("canvas-row");
 
+            dataCanvas.push([]);
+
             for (let j = 0; j < sideLength; j++) {
                 let pixel = document.createElement("article");
                 pixel.classList.add("pixel");
@@ -80,9 +103,32 @@ document.addEventListener("DOMContentLoaded", function (e) {
                 pixel.addEventListener("mouseleave", highlightPixel);
 
                 canvasRow.appendChild(pixel);
+
+                dataCanvas.at(i).push("white")
             }
 
-            canvas.append(canvasRow);
+            canvas.appendChild(canvasRow);
+        }
+    }
+
+    function createCanvasFromData(data) {
+        let canvas = document.getElementById("canvas");
+
+        for (let i = 0; i < data.length; i++) {
+            let canvasRow = document.createElement("section");
+            canvasRow.classList.add("canvas-row");
+            
+            for (let j = 0; j < data.length; j++) {
+                let pixel = document.createElement("article");
+                pixel.classList.add("pixel", "pixel-" + dataCanvas.at(i).at(j));
+                pixel.addEventListener("mouseover", fillPixel);
+                pixel.addEventListener("mouseenter", highlightPixel);
+                pixel.addEventListener("mouseleave", highlightPixel);
+
+                canvasRow.appendChild(pixel);
+            }
+
+            canvas.appendChild(canvasRow);
         }
     }
 
@@ -141,7 +187,21 @@ document.addEventListener("DOMContentLoaded", function (e) {
             while (classList.length > 0) classList.remove(classList.item(0));
 
             classList.add("pixel", "pixel-" + currentColour, "pixel-highlighted");
+
+            let canvas = document.getElementById("canvas");
+
+            for (let i = 0; i < canvas.children.length; i++) {
+                for (let j = 0; j < canvas.children[i].children.length; j++) {
+                    if (e.target.isEqualNode(canvas.children[i].children[j])) {
+                        // Fill in (i, j) of dataCanvas
+                        dataCanvas[i][j] = currentColour;
+                    }
+                }
+            }
+
+            localStorage.setItem("dataCanvas", JSON.stringify(dataCanvas));
         }
+
     }
 
     function highlightPixel(e) {
@@ -156,8 +216,10 @@ document.addEventListener("DOMContentLoaded", function (e) {
         popup.classList.add("popup-hidden");
     }
 
-    function saveCanvas(e) {
+    function saveCanvas() {
+        // let canvas = document.getElementById("canvas");
 
+        // localStorage.setItem("canvas", canvas.innerHTML);
     }
 
     function showEditorPopup() {
