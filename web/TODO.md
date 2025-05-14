@@ -38,6 +38,11 @@ A list of tasks I need to do to complete this project.
     - [ ] Pressing enter whilst focused on the _X_ icon in the editor popup should
     close it
     - [ ] Pressed ESC whilst the editor popup is open should close it
+- [ ] History array (an array of objects each containing a colour, x position,
+and y position)
+    - [ ] Save history
+    - [ ] Undo button
+    - [ ] Redo button
 
 ### Validation
 

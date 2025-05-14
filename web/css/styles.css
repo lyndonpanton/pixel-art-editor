@@ -302,7 +302,6 @@ footer {
 .project-list-item {
     margin-bottom: 2vh;
 
-    color: grey;
     font-size: 1.3em;
 }
 
@@ -316,6 +315,11 @@ footer {
 .project-list-link {
     color: black;
     text-decoration: none;
+}
+
+.project-list-link:hover, .project-list-link:focus {
+    color: steelblue;
+    text-decoration: underline;
 }
 
 #data {
