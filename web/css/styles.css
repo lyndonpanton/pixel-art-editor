@@ -317,7 +317,7 @@ footer {
     text-decoration: none;
 }
 
-.project-list-link:hover, .project-list-link:focus {
+.project-list-link:focus, .project-list-link:hover {
     color: steelblue;
     text-decoration: underline;
 }
@@ -351,6 +351,11 @@ footer {
     text-decoration: none;
 }
 
+.data-legal-item > .data-list-link:focus, .data-legal-item > .data-list-link:hover {
+    color: steelblue;
+    text-decoration: underline;
+}
+
 #data-social {
     /* justify-content: ; */
 }
@@ -359,6 +364,36 @@ footer {
     margin-left: 3vw;
 
     font-size: 1.7em;
+}
+
+.fa-facebook {
+    transition: color 1s linear;
+}
+
+.fa-facebook:hover {
+    color: #1877F2;
+
+    transition: color 1 linear;
+}
+
+.fa-instagram {
+    transition: color 1s linear;
+}
+
+.fa-instagram:hover {
+    color: #C13584;
+
+    transition: color 1s linear;
+}
+
+.fa-twitter {
+    transition: color 1s linear;
+}
+
+.fa-twitter:hover {
+    color: #1DA1F2;
+
+    transition: color 1s linear;
 }
 
 #copyright {
