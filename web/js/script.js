@@ -18,22 +18,22 @@ document.addEventListener("DOMContentLoaded", function (e) {
     let currentColour;
     let previousColour;
 
-    let dataColour;
-
     if (localStorage.getItem("dataColour")) {
         currentColour = localStorage.getItem("dataColour");
     }
 
     // 4x4 - 48x48
-    let currentSideLength = 16;
+    let currentSideLength;
     // A multidimensional array of colours
     let dataCanvas = [];
 
     if (localStorage.getItem("dataCanvas")) {
         dataCanvas = JSON.parse(localStorage.getItem("dataCanvas"));
+        currentSideLength = dataCanvas.length;
         createCanvasFromData(dataCanvas);
         console.log(dataCanvas);
     } else {
+        currentSideLength = 16;
         createCanvas(currentSideLength);
     }
 
