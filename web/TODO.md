@@ -31,7 +31,7 @@ A list of tasks I need to do to complete this project.
 
 ### Interactivity
 
-- [ ] Pressing the clear button show reset the editor
+- [x] Pressing the clear button show reset the editor
 - [ ] Pressing the save button should give download an image to the user
 - [ ] Closing the editor popup
     - [ ] Clicking _X_ icon in the editor popup should close it
@@ -47,7 +47,7 @@ same size it is already
 
 ### Storage
 
-- [ ] Current canvas state should be saved to localStorage
+- [x] Current canvas state should be saved to localStorage
 - [ ] Current colour should be saved to localStorage
 
 ### Accessibility

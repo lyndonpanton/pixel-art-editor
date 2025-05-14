@@ -18,6 +18,12 @@ document.addEventListener("DOMContentLoaded", function (e) {
     let currentColour;
     let previousColour;
 
+    let dataColour;
+
+    if (localStorage.getItem("dataColour")) {
+        currentColour = localStorage.getItem("dataColour");
+    }
+
     // 4x4 - 48x48
     let currentSideLength = 16;
     // A multidimensional array of colours
@@ -56,6 +62,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
         );
         
         currentColour = colour;
+        localStorage.setItem("dataColour", currentColour);
         
         if (previousColour != null) previousColour.classList.remove("picker-colour-selected");
 
@@ -135,13 +142,13 @@ document.addEventListener("DOMContentLoaded", function (e) {
     function createPicker(colours) {
         let picker = document.getElementById("picker");
 
-        for (let colour in colours) {
+        for (let i = 0; i < colours.length; i++) {
             let pickerColour = document.createElement("article");
-            pickerColour.classList.add("picker-colour", "pixel-" + colours[colour]);
+            pickerColour.classList.add("picker-colour", "pixel-" + colours[i]);
             pickerColour.addEventListener("click", changeColour);
 
-            // Highlight default colour
-            if (colours[0] == colours[colour]) {
+            if (colours[i] == currentColour) {
+                
                 const event = new Event("click");
                 pickerColour.dispatchEvent(event);
             }
