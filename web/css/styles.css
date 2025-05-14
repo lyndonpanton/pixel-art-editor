@@ -35,6 +35,10 @@ input[type=number] {
 header {
     padding: 0 8vw;
     height: 15vh;
+
+    background-color: #222266;
+
+    color: white;
 }
 
 h1 {
@@ -49,6 +53,8 @@ h1 {
 main {
     padding: 0 8vw;
     height: 85vh;
+
+    background-color: #000044;
 }
 
 /* Popup */
@@ -281,6 +287,10 @@ main {
 /* Footer *********************************************************************/
 footer {
     padding: 0 8vw;
+    
+    background-color: #222266;
+
+    color: #AAAAAA;
 }
 
 #project {
@@ -308,17 +318,16 @@ footer {
 .project-list-heading {
     margin-bottom: 4vh;
 
-    color: black;
     font-size: 1.5em;
 }
 
 .project-list-link {
-    color: black;
+    color: inherit;
     text-decoration: none;
 }
 
 .project-list-link:focus, .project-list-link:hover {
-    color: steelblue;
+    color: white;
     text-decoration: underline;
 }
 
@@ -352,8 +361,7 @@ footer {
 }
 
 .data-legal-item > .data-list-link:focus, .data-legal-item > .data-list-link:hover {
-    color: steelblue;
-    text-decoration: underline;
+    color: white;
 }
 
 #data-social {
@@ -370,7 +378,7 @@ footer {
     transition: color 1s linear;
 }
 
-.fa-facebook:hover {
+.fa-facebook:focus, .fa-facebook:hover {
     color: #1877F2;
 
     transition: color 1 linear;
@@ -380,7 +388,7 @@ footer {
     transition: color 1s linear;
 }
 
-.fa-instagram:hover {
+.fa-instagram:focus, .fa-instagram:hover {
     color: #C13584;
 
     transition: color 1s linear;
@@ -390,13 +398,14 @@ footer {
     transition: color 1s linear;
 }
 
-.fa-twitter:hover {
+.fa-twitter:focus, .fa-twitter:hover {
     color: #1DA1F2;
 
     transition: color 1s linear;
 }
 
 #copyright {
+    margin: 0;
     padding: 1vh 0;
 
     font-size: 1.6em;
