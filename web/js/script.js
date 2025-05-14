@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
     let previousColour;
 
     // 4x4 - 64x64
-    createEditor(16);
+    createCanvas(16);
     createPicker(colours);
 
     let canDraw = false;
@@ -44,35 +44,37 @@ document.addEventListener("DOMContentLoaded", function (e) {
 
         const formData = new FormData(form);
 
-        let editor = document.getElementById("editor");
+        let canvas = document.getElementById("canvas");
         
-        while (editor.firstChild) {
-            editor.removeChild(editor.firstChild);
+        while (canvas.firstChild) {
+            canvas.removeChild(canvas.firstChild);
         }
 
         for (const [key, sideLength] of formData) {
-            createEditor(sideLength);
+            createCanvas(sideLength);
         }
 
         hideEditorPopup();
     }
     
-    function createEditor(sideLength) {
-        let editor = document.getElementById("editor");
+    function createCanvas(sideLength) {
+        let canvas = document.getElementById("canvas");
 
         for (let i = 0; i < sideLength; i++) {
-            let editorRow = document.createElement("section");
-            editorRow.classList.add("editor-row");
+            let canvasRow = document.createElement("section");
+            canvasRow.classList.add("canvas-row");
 
             for (let j = 0; j < sideLength; j++) {
                 let pixel = document.createElement("article");
                 pixel.classList.add("pixel");
                 pixel.addEventListener("mouseover", fillPixel);
+                pixel.addEventListener("mouseenter", highlightPixel);
+                pixel.addEventListener("mouseleave", highlightPixel);
 
-                editorRow.appendChild(pixel);
+                canvasRow.appendChild(pixel);
             }
 
-            editor.append(editorRow);
+            canvas.append(canvasRow);
         }
     }
 
@@ -122,7 +124,15 @@ document.addEventListener("DOMContentLoaded", function (e) {
 
             while (classList.length > 0) classList.remove(classList.item(0));
 
-            classList.add("pixel", "pixel-" + currentColour);
+            classList.add("pixel", "pixel-" + currentColour, "pixel-highlighted");
+        }
+    }
+
+    function highlightPixel(e) {
+        if (e.type == "mouseenter") {
+            e.target.classList.add("pixel-highlighted");
+        } else {
+            e.target.classList.remove("pixel-highlighted");
         }
     }
 

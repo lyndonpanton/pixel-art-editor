@@ -116,18 +116,32 @@ main {
     font-size: 1.3em;
 }
 
-#popup-submit:active {
+#popup-submit:active, #editor-button:active {
     background-color: #BCDEFF;
 }
 
+#editor-button {
+    display: block;
+
+    margin: 0 auto 4vh;
+    border: 2px solid black;
+    border-radius: 4px;
+    width: 240px;
+    height: 60px;
+
+    background-color: #ABCDEF;
+
+    font-size: 1.2em;
+}
+
 /* Editor */
-#editor {
+#canvas {
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
 
-.editor-row {
+.canvas-row {
     
 }
 
@@ -137,6 +151,10 @@ main {
     
     width: 16px;
     height: 16px;
+}
+
+.pixel-highlighted {
+    border: 3px solid black;
 }
 
 .pixel-black {
