@@ -287,10 +287,11 @@ main {
 /* Footer *********************************************************************/
 footer {
     padding: 0 8vw;
-    
-    background-color: #222266;
 
-    color: #AAAAAA;
+    background-color: #222266;
+    /* background-color: #000044; */
+
+    color: #EEEEEE;
 }
 
 #project {

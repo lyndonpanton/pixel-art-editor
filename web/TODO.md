@@ -21,7 +21,8 @@ A list of tasks I need to do to complete this project.
 
 ### Styling
 
-- [ ] Change theme colour
+- [x] Change theme colour
+- [ ] Add border to canvas to separate it from its container
 - [ ] Project should be optimised for different screen sizes
     - [ ] Desktop
         - [ ] Canvas and picker should be on the same row

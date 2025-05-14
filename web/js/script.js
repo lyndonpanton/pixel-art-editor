@@ -110,7 +110,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
 
             for (let j = 0; j < sideLength; j++) {
                 let pixel = document.createElement("article");
-                pixel.classList.add("pixel");
+                pixel.classList.add("pixel", "pixel-white");
                 pixel.addEventListener("mouseover", fillPixel);
                 pixel.addEventListener("mouseenter", highlightPixel);
                 pixel.addEventListener("mouseleave", highlightPixel);
