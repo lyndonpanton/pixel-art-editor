@@ -165,6 +165,21 @@ main {
 }
 
 /* Editor */
+#editor {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#editor > #canvas {
+    justify-self: center;
+}
+
+#editor > #picker {
+    justify-self: end;
+}
+
 #canvas {
     display: flex;
     flex-direction: row;
