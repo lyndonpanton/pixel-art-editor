@@ -26,11 +26,12 @@
     </header>
 
     <main>
-        <div id="popup" class="popup-hidden">
-            <form id="popup-form">
-                <label for="popup-input" id="popup-prompt">What width and height would you like the editor to have?</label>
-                <input type="number" value="16" step="1" min="4" max="48" placeholder="e.g. 8, 16, 32" id="popup-input" name="popup-input" id="popup-input"/>
-                <input type="submit" value="Change editor size" id="popup-submit" name="popup-submit"/>
+        <div id="popup-editor" class="popup-hidden">
+            <i id="popup-editor-close" class="fa-solid fa-xmark"></i>
+            <form id="popup-editor-form">
+                <label for="popup-editor-input" id="popup-editor-prompt">What width and height would you like the editor to have?</label>
+                <input type="number" value="16" step="1" min="4" max="48" placeholder="e.g. 8, 16, 32" id="popup-editor-input" name="popup-editor-input" id="popup-editor-input"/>
+                <input type="submit" value="Change editor size" id="popup-editor-submit" name="popup-editor-submit"/>
             </form>
         </div>
 

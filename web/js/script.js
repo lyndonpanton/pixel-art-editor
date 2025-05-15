@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
     document.addEventListener("mousedown", enableDrawing);
     document.addEventListener("mouseup", disableDrawing);
 
-    let popup = document.getElementById("popup");
+    let popupEditor = document.getElementById("popup-editor");
     let sizeButton = document.getElementById("editor-button-size");
     let downloadButton = document.getElementById("editor-button-download");
     let clearButton = document.getElementById("editor-button-clear");
@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
     downloadButton.addEventListener("click", downloadCanvas);
     clearButton.addEventListener("click", clearCanvas);
 
-    let form = document.getElementById("popup-form");
+    let form = document.getElementById("popup-editor-form");
     form.addEventListener("submit", changeEditorSize);
 
     function changeColour(e) {
@@ -233,10 +233,10 @@ document.addEventListener("DOMContentLoaded", function (e) {
     }
 
     function hideEditorPopup() {
-        popup.classList.add("popup-hidden");
+        popupEditor.classList.add("popup-hidden");
     }
 
     function showEditorPopup() {
-        popup.classList.remove("popup-hidden");
+        popupEditor.classList.remove("popup-hidden");
     }
 });

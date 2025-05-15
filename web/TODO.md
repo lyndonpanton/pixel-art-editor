@@ -27,7 +27,7 @@ A list of tasks I need to do to complete this project.
 ### Styling
 
 - [x] Change theme colour
-- [ ] Add border to canvas to separate it from its container
+- [x] Add border to canvas to separate it from its container
 - [ ] Project should be optimised for different screen sizes
     - [ ] Desktop
         - [ ] Canvas and picker should be on the same row
@@ -50,7 +50,7 @@ and y position)
     - [ ] Undo button
     - [ ] Redo button
 - Application shortcuts
-    - [ ] E -> white
+    - [ ] E -> White pen
     - [ ] C -> Clear canvas
     - [ ] D -> Download artwork
     - [ ] S -> Change canvas size
