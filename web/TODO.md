@@ -20,19 +20,18 @@ A list of tasks I need to do to complete this project.
         - [ ] S -> Change canvas size
     - [ ] Add a colour to the bottom right corner of the picker
     - [ ] Add a colour randomiser to the picker
-- [ ] Footer
+- [x] Footer
     - [x] Add project information
     - [x] Add social and legal links
     - [x] Add copyright
-    - [ ] Change font (see portfolio)
 
 ### Styling
 
 - [x] Change theme colour
 - [x] Add border to canvas to separate it from its container
 - [ ] Project should be optimised for different screen sizes
-    - [ ] Desktop
-        - [ ] Canvas and picker should be on the same row
+    - [x] Desktop
+        - [x] Canvas and picker should be on the same row
     - [ ] Laptop
     - [ ] Tablet
     - [ ] Mobile

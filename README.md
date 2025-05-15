@@ -42,7 +42,3 @@ button and then unzipped onto the user's computer for use.
 - [Lyndon Mykal Panton (Developer)](https://github.com/lyndonpanton)
 
 ## References
-
-- [Saving HTML to localStorage with Vanillia JS | GoMakeThings](https://gomakethings.com/saving-html-to-localstorage-with-vanilla-js/)
-- [How do I store an array in localStorage? | StackOverflow](https://stackoverflow.com/questions/3357553/how-do-i-store-an-array-in-localstorage)
-- [Colour names](https://developer.mozilla.org/en-US/docs/Web/CSS/named-color)

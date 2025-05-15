@@ -324,7 +324,7 @@ main {
 footer {
     padding: 0 8vw;
 
-    background-color: #222266;
+    background-color: #111111;
 
     color: #EEEEEE;
 }
@@ -407,6 +407,7 @@ footer {
 .data-social-item {
     margin-left: 3vw;
 
+    color: white !important;
     font-size: 1.7em;
 }
 
