@@ -270,13 +270,13 @@ main {
     display: flex;
     flex-wrap: wrap;
 
-    width: 320px
+    width: 160px
 }
 
 .picker-colour {
     border: 1px solid black;
-    width: 80px;
-    height: 80px;
+    width: 40px;
+    height: 40px;
 }
 
 .picker-colour-selected {

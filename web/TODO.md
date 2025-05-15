@@ -13,10 +13,15 @@ A list of tasks I need to do to complete this project.
     - [x] Add clear button
     - [x] Add save button
     - [ ] Editor size popup should have a _X_ icon
+    - [ ] Display list of shortcuts on screen
+        - [ ] E -> white
+        - [ ] C -> Clear canvas
+        - [ ] D -> Download artwork
+        - [ ] S -> Change canvas size
 - [ ] Footer
-    - [ ] Add project information
-    - [ ] Add social and legal links
-    - [ ] Add copyright
+    - [x] Add project information
+    - [x] Add social and legal links
+    - [x] Add copyright
     - [ ] Change font (see portfolio)
 
 ### Styling
@@ -44,6 +49,13 @@ and y position)
     - [ ] Save history
     - [ ] Undo button
     - [ ] Redo button
+- Application shortcuts
+    - [ ] E -> white
+    - [ ] C -> Clear canvas
+    - [ ] D -> Download artwork
+    - [ ] S -> Change canvas size
+    - [ ] U -> Undo
+    - [ ] R -> Redo
 
 ### Validation
 
