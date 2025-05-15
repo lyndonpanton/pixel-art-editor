@@ -78,6 +78,15 @@ main {
     display: none;
 }
 
+.popup-icon-close {
+    position: relative;
+    top: 20px;
+    left: 94%;
+
+    color: white;
+    font-size: 6em;
+}
+
 #popup-editor-form {
     margin-top: 25vh;
     margin-left: 20vw;

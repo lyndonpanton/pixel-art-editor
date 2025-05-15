@@ -37,7 +37,6 @@ document.addEventListener("DOMContentLoaded", function (e) {
         dataCanvas = JSON.parse(localStorage.getItem("dataCanvas"));
         currentSideLength = dataCanvas.length;
         createCanvasFromData(dataCanvas);
-        console.log(dataCanvas);
     } else {
         currentSideLength = 16;
         createCanvas(currentSideLength);
@@ -49,7 +48,6 @@ document.addEventListener("DOMContentLoaded", function (e) {
 
     document.addEventListener("mousedown", enableDrawing);
     document.addEventListener("mouseup", disableDrawing);
-
     let popupEditor = document.getElementById("popup-editor");
     let sizeButton = document.getElementById("editor-button-size");
     let downloadButton = document.getElementById("editor-button-download");
@@ -61,6 +59,15 @@ document.addEventListener("DOMContentLoaded", function (e) {
 
     let form = document.getElementById("popup-editor-form");
     form.addEventListener("submit", changeEditorSize);
+
+    let popupIcons = document.getElementsByClassName("popup-icon-close");
+
+    // document.addEventListener("keypress", closePopup);
+
+    for (let i = 0; i < popupIcons.length; i++) {
+        popupIcons[i].addEventListener("click", closePopup);
+        popupIcons[i].addEventListener("keypress", closePopup);
+    }
 
     function changeColour(e) {
         let colour = e.target.classList[1].slice(
@@ -97,6 +104,26 @@ document.addEventListener("DOMContentLoaded", function (e) {
     function clearCanvas(e) {
         destroyCanvas();
         createCanvas(currentSideLength);
+    }
+
+    function closePopup(e) {
+        if (e.target.parentElement.classList.contains("popup")) {
+            if (e.type === "click" || e.type === "keypress" && e.key === "Enter") {
+                e.target.parentElement.classList.add("popup-hidden");
+            }
+        }
+        
+        // else {
+        //     // Close all popups
+        //     if (e.key == "Escape") {
+        //         for (let i = 0; i < popupIcons.length; i++) {
+        //             let parentClassList = popupIcons[i].parentElement.classList;
+        //             if (!parentClassList.contains("popup-hidden")) {
+        //                 parentClassList.add("popup-hidden");
+        //             }
+        //         }
+        //     }
+        // }
     }
     
     function createCanvas(sideLength) {
