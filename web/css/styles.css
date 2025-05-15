@@ -332,6 +332,7 @@ footer {
 #project {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-around;
     
     border-bottom: 1px solid #AAAAAA;
@@ -375,10 +376,7 @@ footer {
 
 .data-list {
     display: flex;
-}
-
-#data-legal {
-    /* justify-content: start; */
+    padding: 0;
 }
 
 .data-list-item {
@@ -398,10 +396,6 @@ footer {
 
 .data-legal-item > .data-list-link:focus, .data-legal-item > .data-list-link:hover {
     color: white;
-}
-
-#data-social {
-    /* justify-content: ; */
 }
 
 .data-social-item {
@@ -447,8 +441,4 @@ footer {
 
     font-size: 1.6em;
     text-align: center;
-}
-
-#current-year {
-
 }

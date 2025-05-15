@@ -1,23 +1,61 @@
 @media screen and (max-width: 1024px) {
-/* General ********************************************************************/
+    /* General ****************************************************************/
 
-/* Header ********************************************************************/
-h1 {
-    padding-top: 3vh;
+    /* Header *****************************************************************/
+    h1 {
+        padding-top: 3vh;
 
-    font-size: 3.8em;
-}
+        font-size: 3.8em;
+    }
 
-/* Main ********************************************************************/
+    /* Main *******************************************************************/
 
-/* Popup */
+    /* Popup */
 
-/* Editor */
+    /* Editor */
 
-/* Canvas */
+    /* Canvas */
 
-/* Picker */
+    /* Picker */
 
-/* Footer ********************************************************************/
+    /* Footer *****************************************************************/
+    footer {
+        padding: 0;
+    }
 
+    .project-list {
+        margin-top: 4vh;
+        width: 40%;
+    }
+
+    .project-list-item {
+        font-size: 0.9em;
+    }
+
+    .project-list-heading {
+        font-size: 1.2em;
+    }
+
+    #data {
+        display: block;
+
+        margin-top: 3vh;
+    }
+
+    .data-list-item {
+        text-align: center;
+        margin: 2vh auto;
+    }
+
+    .data-legal-item {
+        font-size: 1.3em;
+    }
+
+    .data-social-item {
+        font-size: 1.4em;
+    }
+
+    #copyright {
+        font-size: 1.3em;
+    }
 }

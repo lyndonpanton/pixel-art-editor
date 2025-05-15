@@ -27,6 +27,7 @@ A list of tasks I need to do to complete this project.
 
 ### Styling
 
+- [ ] Change font (current font not readable enough)
 - [x] Change theme colour
 - [x] Add border to canvas to separate it from its container
 - [ ] Project should be optimised for different screen sizes
