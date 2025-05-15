@@ -50,11 +50,11 @@ document.addEventListener("DOMContentLoaded", function (e) {
     document.addEventListener("mouseup", disableDrawing);
     let popupEditor = document.getElementById("popup-editor");
     let sizeButton = document.getElementById("editor-button-size");
-    let downloadButton = document.getElementById("editor-button-download");
+    // let downloadButton = document.getElementById("editor-button-download");
     let clearButton = document.getElementById("editor-button-clear");
 
     sizeButton.addEventListener("click", showEditorPopup);
-    downloadButton.addEventListener("click", downloadCanvas);
+    // downloadButton.addEventListener("click", downloadCanvas);
     clearButton.addEventListener("click", clearCanvas);
 
     let form = document.getElementById("popup-editor-form");

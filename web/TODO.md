@@ -12,12 +12,14 @@ A list of tasks I need to do to complete this project.
 - [ ] Main
     - [x] Add clear button
     - [x] Add save button
-    - [ ] Editor size popup should have a _X_ icon
+    - [x] Editor size popup should have a _X_ icon
     - [ ] Display list of shortcuts on screen
         - [ ] E -> white
         - [ ] C -> Clear canvas
         - [ ] D -> Download artwork
         - [ ] S -> Change canvas size
+    - [ ] Add a colour to the bottom right corner of the picker
+    - [ ] Add a colour randomiser to the picker
 - [ ] Footer
     - [x] Add project information
     - [x] Add social and legal links
@@ -39,9 +41,9 @@ A list of tasks I need to do to complete this project.
 
 - [x] Pressing the clear button show reset the editor
 - [ ] Pressing the save button should give download an image to the user
-- [ ] Closing the editor popup
-    - [ ] Clicking _X_ icon in the editor popup should close it
-    - [ ] Pressing enter whilst focused on the _X_ icon in the editor popup should
+- [x] Closing the editor popup
+    - [x] Clicking _X_ icon in the editor popup should close it
+    - [x] Pressing enter whilst focused on the _X_ icon in the editor popup should
     close it
     - [ ] Pressed ESC whilst the editor popup is open should close it
 - [ ] History array (an array of objects each containing a colour, x position,
