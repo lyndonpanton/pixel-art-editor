@@ -184,6 +184,9 @@ main {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    border: 5px solid #8DD8FF;
+
+    margin-right: 3vw;
 }
 
 .canvas-row {
@@ -280,12 +283,11 @@ main {
 
 /* Picker */
 #picker {
-    /* display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr; */
     display: flex;
     flex-wrap: wrap;
 
-    width: 160px
+    border: 5px solid #8DD8FF;
+    width: 170px /* 160 + 5 (border) + 5 (border) */
 }
 
 .picker-colour {
