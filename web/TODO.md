@@ -89,5 +89,7 @@ same size it is already
 - [x] Add development tools used for project in [README.md](../README.md)
 - [ ] Add project to portfolio
     - [x] Link
-    - [ ] Screenshot
+    - [x] Screenshot
     - [ ] Upload to website
+        - [ ] Application files
+        - [ ] Image files
