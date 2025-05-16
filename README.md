@@ -21,6 +21,11 @@ in your browser
 
 ## Features
 
+- Users can draw pixel art on a canvas
+- Users can select different colours to draw with
+- Users can change the size of the canvas they are drawing on
+- Users can clear the canvas quickly by clicking a button
+
 ## Technology
 
 ### Development Tools
