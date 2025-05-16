@@ -11,6 +11,31 @@
     /* Main *******************************************************************/
 
     /* Popup */
+    .popup-icon-close {
+        left: 92%;
+
+        font-size: 3em;
+    }
+
+    #popup-editor-form {
+        margin-left: 15vw;
+        width: 70vw;
+    }
+
+    #popup-editor-prompt {
+        font-size: 0.5em;
+    }
+
+    #popup-editor-input {
+        font-size: 0.6em;
+    }
+
+    #popup-editor-submit {
+        margin-top: 3vh;
+        height: 4vh;
+
+        font-size: 0.6em;
+    }
 
     /* Editor */
     #editor {
@@ -19,10 +44,22 @@
         width: 100%;
     }
 
+    .editor-button {
+        font-size: 0.8em;
+
+        margin: 0 20px;
+        width: 120px;
+        height: 40px;
+    }
+
     /* Canvas */
     #canvas {
-        margin: 0 auto;
-        width: fit-content;
+        border-width: 2px;
+    }
+
+    .pixel {
+        width: 8px;
+        height: 8px;
     }
 
     /* Picker */
