@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
         currentColour = localStorage.getItem("dataColour");
     }
 
-    // 4x4 - 48x48
+    // 4x4 - 40x40
     let currentSideLength;
     // A multidimensional array of colours
     let dataCanvas = [];
