@@ -31,8 +31,8 @@ in your browser
 ### Development Tools
 
 - Command Prompt
+- Chrome, Edge, Firefox
 - Visual Studio Code
-- XAMPP
 
 ### Languages and Frameworks
 
