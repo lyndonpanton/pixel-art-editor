@@ -84,9 +84,10 @@ same size it is already
 
 ### Deployment
 
-- [ ] Add setup instructions to [README.md](../README.md)
-- [ ] State features of the project in [README.md](../README.md)
+- [x] Add setup instructions for project to [README.md](../README.md)
+- [x] Add features of the project in [README.md](../README.md)
+- [x] Add development tools used for project in [README.md](../README.md)
 - [ ] Add project to portfolio
-    - [ ] Link
+    - [x] Link
     - [ ] Screenshot
     - [ ] Upload to website
