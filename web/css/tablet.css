@@ -9,14 +9,84 @@
     }
 
     /* Main *******************************************************************/
+    main {
+        display: block;
+
+        padding: 0;
+    }
 
     /* Popup */
+    .popup-icon-close {
+        /* top:  */
+        left: 90%;
+        font-size: 4em;
+    }
 
+    #popup-editor-form {
+        margin-top: 25vh;
+        width: 46vw;
+        height: 30vh;
+    }
+
+    #popup-editor-prompt {
+        margin-top: 3vh;
+
+        font-size: 0.6em;
+    }
+
+    #popup-editor-input {
+        margin-top: 3vh;
+        height: 5vh;
+
+        font-size: 0.8em;
+    }
+    
+    #popup-editor-submit {
+        width: 240px;
+        height: 5vh;
+
+        font-size: 0.6em;
+    }
     /* Editor */
 
+    #editor-buttons {
+        flex-direction: row;
+
+        padding-top: 4vh;
+        width: 100%;
+    }
+
+    .editor-button {
+        margin: 0 40px;
+    }
+
     /* Canvas */
+    #canvas {
+        margin: 0 auto;
+        border-width: 3px;
+        width: fit-content;
+    }
+
+    .pixel {
+        width: 12px;
+        height: 12px;
+    }
 
     /* Picker */
+    #picker {
+        margin: 3vh auto;
+        border-width: 3px;
+        width: 150px; /* 144 (6 colours) + 3 (border) + 3 (border) */
+    }
+
+    .picker-colour {
+        width: 24px;
+        height: 24px;
+    }
+
+    .picker-colour-selected {
+        border-width: 3px;
+    }
 
     /* Footer *****************************************************************/
     footer {

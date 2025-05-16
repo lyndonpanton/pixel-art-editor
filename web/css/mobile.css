@@ -13,10 +13,33 @@
     /* Popup */
 
     /* Editor */
+    #editor {
+        display: block;
+
+        width: 100%;
+    }
 
     /* Canvas */
+    #canvas {
+        margin: 0 auto;
+        width: fit-content;
+    }
 
     /* Picker */
+    #picker {
+        margin: 3vh auto;
+        border-width: 2px;
+        width: 164px; /* 160 (10 colours) + 2 (border) + 2 (border) */
+    }
+
+    .picker-colour {
+        width: 16px;
+        height: 16px;
+    }
+
+    .picker-colour-selected {
+        border-width: 3px;
+    }
 
     /* Footer *****************************************************************/
     .project-list {

@@ -10,7 +10,7 @@
 
     /* Main *******************************************************************/
     main {
-        padding: 0 4vw;
+        padding: 0 2vw;
     }
 
     /* Popup */
@@ -52,12 +52,12 @@
 
     /* Editor */
     .editor-button {
-        margin: 0 15px;
+        margin: 3vh auto;
         border-radius: 3px;
-        width: 200px;
-        height: 50px;
+        width: 160px;
+        height: 40px;
 
-        font-size: 1.1em;
+        font-size: 1em;
     }
 
     /* Canvas */
@@ -75,7 +75,7 @@
     /* Picker */
     #picker {
         border-width: 4px;
-        width: 168px; /* 160 + 4 (border) + 4 (border) */
+        width: 168px; /* 160 (5 colours) + 4 (border) + 4 (border) */
     }
 
     .picker-colour {
@@ -84,7 +84,6 @@
     }
 
     .picker-colour-selected {
-        border-color: white;
         border-width: 4px;
     }
 
