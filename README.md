@@ -12,9 +12,12 @@ The project can be downloaded from
 [GitHub](https://github.com/lyndonpanton/pixel-art-editor) using the **Code**
 button and then unzipped onto the user's computer for use.
 
-### Configuring The Server Application
-
 ### Starting The Application
+
+- Unzip the project on your computer
+- Go to the `web` folder inside the project and double-click the file to open it
+in your browser
+- You can now view and interact with the application
 
 ## Features
 

@@ -30,12 +30,12 @@ A list of tasks I need to do to complete this project.
 - [ ] Change font (current font not readable enough)
 - [x] Change theme colour
 - [x] Add border to canvas to separate it from its container
-- [ ] Project should be optimised for different screen sizes
+- [x] Project should be optimised for different screen sizes
     - [x] Desktop
         - [x] Canvas and picker should be on the same row
-    - [ ] Laptop
-    - [ ] Tablet
-    - [ ] Mobile
+    - [x] Laptop
+    - [x] Tablet
+    - [x] Mobile
 
 ### Interactivity
 
